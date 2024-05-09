@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <style>
+        .textcenter {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+        }
+
+        .buttoncenter {
+            position: absolute;
+            top: 58%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <title>North Park Secondary School Library</title>
+    <link rel="icon" type="image/x-icon" href="https://northpark.peelschools.org/images/logo.svg">
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">NORTH PARK SECONDARY SCHOOL</h1>
+    <hr>
+    
+    <div class="textcenter">
+        <h2 style="text-align:center;">TECHNICIAN LOGIN</h2>
+    </div>
+
+    <div class="center">
+        <form id="loginForm">
+            <label for="TechnicianNumber">Technician Number</label><br>
+            <input type="text" id="TechnicianNumber" name="TechnicianNumber" required><br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+        </form>
+    </div>
+
+    <a href="techniciancontrols.html">
+    <button class="buttoncenter" id="loginButton">Login</button>
+    </a>
+
+
+</body>
+
+<script>
+    document.getElementById('loginButton').addEventListener('click', function() {
+        let technicianNumber = document.getElementById('TechnicianNumber').value;
+        let password = document.getElementById('password').value;
+
+        alert(`The following login information has been inputted:
+Technician Number: ${technicianNumber}
+Password: ${password}`);
+    });
+</script>
+
+</html>

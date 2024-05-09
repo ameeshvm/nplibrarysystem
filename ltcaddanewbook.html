@@ -1,0 +1,97 @@
+
+<html>
+
+<head>
+    <title>North Park Secondary School Library</title>
+    <link rel="icon" type="imagex.icon" href="https://northpark.peelschools.org/images/logo.svg">
+
+    <style>
+        .bookcover {
+            width: 435px;
+            height: 480px;
+            padding: 10px;
+            border: 5px solid gray;
+            position: absolute;
+            top: 55%;
+            left: 25%;
+            transform: translate(-25%, -50%);
+        }
+
+        .coverbutton {
+            position: absolute;
+            top: 95%;
+            left: 30.5%;
+            transform: translate(-30.5%, -90%);
+        }
+
+        .buttoncenter {
+            position: absolute;
+            top: 110%;
+            left: 65%;
+            transform: translate(-90%, -50%);
+        }
+
+        .buttoncenter2 {
+            position: absolute;
+            top: 120%;
+            left: 62.5%;
+            transform: translate(-90%, -50%);
+        }
+
+        .center {
+            position: absolute;
+            top: 55%;
+            left: 65%;
+            transform: translate(-45%, -65%);
+        }
+
+
+    </style>
+</head>
+
+<script src="controls.js"></script>
+
+<body>
+    <h1 style="text-align: center;">NORTH PARK SECONDARY SCHOOL LTC</h1>
+    <h2 style="text-align: center;">ADD A NEW BOOK</h2>
+    <hr>
+
+    <div class="bookcover" id="bookcover">
+        <img src="https://via.placeholder.com/435x480" alt="Book Cover">
+    </div>
+
+    <button class="coverbutton" id="uploadCover">UPLOAD COVER</button>
+
+    <div class="center">
+        <form id="bookForm">
+            <label for="BookNumber">Book Number</label>
+            <input type="text" id="BookNumber" name="BookNumber" required><br><br>
+
+            <label for="BookTitle">Book Title</label>
+            <input type="text" id="BookTitle" name="BookTitle" required><br><br>
+
+            <label for="BookAuthor">Book Author</label>
+            <input type="text" id="BookAuthor" name="BookAuthor" required><br><br>
+
+            <label for="PublicationDate">Publication Date</label>
+            <input type="date" id="PublicationDate" name="PublicationDate" required><br><br>
+
+            <p>Genre:</p>
+            <input type="radio" id="Action" name="Genre" value="Action">
+            <label for="Action">Action</label><br>
+            <input type="radio" id="Adventure" name="Genre" value="Adventure">
+            <label for="Adventure">Adventure</label><br>
+            <input type="radio" id="Biography" name="Genre" value="Biography">
+            <label for="Biography">Biography</label><br>
+            <input type="radio" id="Fiction" name="Genre" value="Fiction">
+            <label for="Fiction">Fiction</label><br>
+            <input type="radio" id="Non-fiction" name="Genre" value="Non-fiction">
+            <label for="Non-fiction">Non-fiction</label><br>
+
+            <button onclick="addBook()" class="buttoncenter" type="submit">SAVE CHANGES</button>
+            <button id="cancelButton" class="buttoncenter2" type="button">CANCEL</button>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>North Park Secondary School Library</title>
+    <link rel="icon" type="image/x-icon" href="https://northpark.peelschools.org/images/logo.svg">
+
+    <style>
+        .bookcover {
+            width: 435px;
+            height: 480px;
+            padding: 10px;
+            border: 5px solid gray;
+            position: absolute;
+            top: 55%;
+            left: 25%;
+            transform: translate(-25%, -50%);
+        }
+
+        .buttoncenter {
+            position: absolute;
+            top: 110%;
+            left: 61.5%;
+            transform: translate(-90%, -50%);
+        }
+
+        .buttoncenter2 {
+            position: absolute;
+            top: 135%;
+            left: 62.5%;
+            transform: translate(-90%, -50%);
+        }
+
+        .center {
+            position: absolute;
+            top: 55%;
+            left: 60%;
+            transform: translate(-45%, -65%);
+        }
+    </style>
+
+    <h1 style="text-align:center;">NORTH PARK SECONDARY SCHOOL LTC</h1>
+    <h2 style="text-align:center;">CHECK OUT A BOOK</h2>
+    <hr>
+
+</head>
+
+<script src="controls.js"></script>
+
+<body>
+
+    <div class="bookcover" id="bookcover">
+        <img src="https://via.placeholder.com/435x480" alt="Book Cover">
+    </div>
+
+    <div class="center">
+        <form id="bookForm">
+            <label for="BookNumber">Book Number</label><br>
+            <input type="text" id="BookNumber" name="BookNumber" required><br><br>
+
+            <label for="BookTitle">Book Title</label><br>
+            <input type="text" id="BookTitle" name="BookTitle" required><br><br>
+
+            <label for="BYODNumber">Student/Teacher Number</label><br>
+            <input type="text" id="BYODNumber" name="BYODNumber" required><br><br>
+
+            <button onclick="checkoutBook()" class="buttoncenter" type="submit">CHECK OUT</button>
+            <button id="cancelButton" class="buttoncenter2" type="button">CANCEL</button>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>

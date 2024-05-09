@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <style>
+        .textcenter {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+        }
+
+        .buttoncenter {
+            position: absolute;
+            top: 58%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+    <title>North Park Secondary School Library</title>
+    <link rel="icon" type="image/x-icon" href="https://northpark.peelschools.org/images/logo.svg">
+</head>
+
+<body>
+
+    <h1 style="text-align:center;">NORTH PARK SECONDARY SCHOOL</h1>
+    <hr>
+    
+    <div class="textcenter">
+        <h2 style="text-align:center;">BYOD LOGIN</h2>
+    </div>
+
+    <div class="center">
+        <form id="loginForm">
+            <label for="BYODNumber">Student/Teacher Number</label><br>
+            <input type="text" id="BYODNumber" name="BYODNumber" required><br><br>
+
+            <label for="password">Password</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+        </form>
+    </div>
+
+    <button class="buttoncenter">Login</button>
+
+
+</body>
+
+<script>
+    document.getElementById('loginButton').addEventListener('click', function() {
+        let BYODNumber = document.getElementById('BYODNumber').value;
+        let password = document.getElementById('password').value;
+
+        alert(`The following login information has been inputted:
+BYOD Number: ${BYODNumber}
+Password: ${password}`);
+    });
+</script>
+
+</html>
